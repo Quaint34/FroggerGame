@@ -505,7 +505,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7989740533833265600, guid: e06fa30a0459d494bbbc5e7af7ba061b, type: 3}
       propertyPath: scene
-      value: Level 3
+      value: You Win
       objectReference: {fileID: 0}
     - target: {fileID: 7989740533833265613, guid: e06fa30a0459d494bbbc5e7af7ba061b, type: 3}
       propertyPath: m_Name
