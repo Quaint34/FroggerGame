@@ -12,7 +12,7 @@ public class SpriteFlip : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         xValue = transform.position.x;
 
-        if(xValue >  0f) { sprite.flipX = true; }
+        if(xValue < 0f) { sprite.flipX = true; }
         else { sprite.flipX = false; }
     }
 

@@ -25,7 +25,7 @@ public class MoveDiscrete : MonoBehaviour
 	{
 		rigidBody = GetComponent<Rigidbody2D> ();
 		source = GetComponent<AudioSource> ();
-		soundTimer = Random.Range(10f, 15f);
+		soundTimer = Random.Range(30f, 60f);
 	}
 	
 	// Update is called once per frame
@@ -36,11 +36,11 @@ public class MoveDiscrete : MonoBehaviour
 		if (Input.GetKeyDown (upKey))	rigidBody.MovePosition(transform.position + new Vector3 (0, distanceY, 0));
 		if (Input.GetKeyDown (downKey))	rigidBody.MovePosition(transform.position + new Vector3 (0, -distanceY, 0));
 		
-		while(soundTimer > 0) { soundTimer -= 0.1f; }
+		while(soundTimer > 0) { soundTimer -= 0.01f; }
 		if (soundTimer <= 0 && !source.isPlaying) 
 		{
-			source.PlayOneShot(clip);
-			soundTimer = Random.Range(10f, 15f);
+			source.PlayOneShot(clip, 0.3f);
+			soundTimer = Random.Range(30f, 60f);
 		}
 	}
 }
